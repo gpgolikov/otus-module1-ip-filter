@@ -2,10 +2,10 @@ dist: xenial
 language: cpp
 compiler: clang
 install:
-- pip install conan
+- pip install --user conan
 - conan user
 script:
-- mkdir contrib/Linux and cd contrib/Linux
+- mkdir -p contrib/Linux and cd contrib/Linux
 - conan install --profile ../conanprofile_linux ..
 - cd -
 - cmake .
