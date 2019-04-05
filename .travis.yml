@@ -1,13 +1,17 @@
 dist: xenial
 language: cpp
-addons:
-  apt:
-    sources:
-      - llvm-toolchain-xenial-8
-    packages:
-      - clang-8
-env:
-- CC=clang-8 CXX=clang++-8
+matrix:
+  - os: linux
+    addons:
+      apt:
+        sources:
+          - llvm-toolchain-xenial-8
+        packages:
+          - clang-8
+    env:
+      - MATRIX_EVAL="CC=clang-8 && CXX=clang++-8"
+before_install:
+- eval "${MATRIX_EVAL}"
 install:
 - pip install --user conan
 - conan user
