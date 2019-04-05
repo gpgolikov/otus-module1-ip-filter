@@ -5,7 +5,7 @@ addons:
   apt:
     sources:
       - llvm-toolchain-xenial-8
-    pacjages:
+    packages:
       - clang-8
 install:
 - pip install --user conan
