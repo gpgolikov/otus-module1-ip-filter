@@ -33,7 +33,7 @@ public:
 
 template <typename T>
 inline auto Equals(T value) {
-    return equals(move(value));
+    return equals<T>(move(value));
 }
 
 inline auto Equals(const char* str) {
