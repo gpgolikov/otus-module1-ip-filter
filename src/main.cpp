@@ -2,12 +2,15 @@
 #include <deque>
 #include <vector>
 #include <iterator>
+#include <algorithm>
+#include <experimental/string_view>
 
 #include "ip_filter.h"
 
 int main()
 {
     using namespace std;
+    using std::experimental::string_view;
 
     try
     {
