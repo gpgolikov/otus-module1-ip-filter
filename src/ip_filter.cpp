@@ -6,10 +6,6 @@
 
 using std::experimental::string_view;
 
-ip_address_t make_ip(int ip_part1, int ip_part2, int ip_part3, int ip_part4) {
-    return std::make_tuple(ip_part1, ip_part2, ip_part3, ip_part4);
-}
-
 ip_address_t ip_read(string_view ip) {
     using namespace std;
 
