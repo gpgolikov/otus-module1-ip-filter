@@ -1,6 +1,12 @@
 dist: xenial
 language: cpp
 compiler: clang
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-xenial-8
+    pacjages:
+      - clang-8
 install:
 - pip install --user conan
 - conan user
