@@ -5,8 +5,9 @@ install:
 - pip install --user conan
 - conan user
 script:
-- mkdir -p contrib/Linux && cd contrib/Linux
-- conan install --profile ../conanprofile_linux ..
+- mkdir -p contrib/Linux
+- cd contrib/Linux
+- conan install ..
 - cd -
 - cmake .
 - cmake --build .
