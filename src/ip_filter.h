@@ -4,8 +4,10 @@
 #include <experimental/string_view>
 #include <tuple>
 
+using std::experimental::string_view;
+
 template<typename OutIt>
-OutIt split(std::string_view s, char d, OutIt out) {
+OutIt split(string_view s, char d, OutIt out) {
     using namespace std;
 
     do {
@@ -23,7 +25,7 @@ OutIt split(std::string_view s, char d, OutIt out) {
 
 using ip_address_t = std::tuple<int, int, int, int>;
 ip_address_t make_ip(int ip_part1, int ip_part2, int ip_part3, int ip_part4);
-ip_address_t ip_read(std::string_view ip); 
+ip_address_t ip_read(string_view ip); 
 
 template <size_t Idx>
 bool __ip_match(const ip_address_t& ip, int ip_part) {
