@@ -1,7 +1,7 @@
 dist: xenial
 language: cpp
 matrix:
-  - os: linux
+  - os: xenial
     addons:
       apt:
         sources:
