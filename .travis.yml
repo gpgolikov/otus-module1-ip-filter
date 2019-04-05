@@ -5,10 +5,7 @@ install:
 - pip install --user conan
 - conan user
 script:
-- mkdir -p contrib/Linux
-- cd contrib/Linux
-- conan install ..
-- cd -
+- conan install .
 - cmake .
 - cmake --build .
 - cmake --build . --target test

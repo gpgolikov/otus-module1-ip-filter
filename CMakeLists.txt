@@ -5,7 +5,8 @@ project(ip_filter VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 configure_file(version.h.in ${CMAKE_BINARY_DIR}/version.h)
 include_directories(${CMAKE_BINARY_DIR})
 
-include(contrib/contrib.cmake)
+include(conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
 
 add_subdirectory(src)
 add_subdirectory(test)
