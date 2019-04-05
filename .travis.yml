@@ -1,8 +1,6 @@
 dist: xenial
 language: cpp
 compiler: clang
-before_install:
-- export CXXFLAGS="-stdlib=libc++"
 install:
 - pip install --user conan
 - conan user

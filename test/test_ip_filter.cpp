@@ -2,7 +2,7 @@
 
 #include <sstream>
 #include <string>
-#include <string_view>
+#include <experimental/string_view>
 #include <vector>
 #include <array>
 
@@ -10,6 +10,8 @@
 
 using namespace std;
 using namespace Catch::Matchers;
+
+using std::experimental::string_view;
 
 template<typename T>
 class equals : public Catch::MatcherBase<T> {
