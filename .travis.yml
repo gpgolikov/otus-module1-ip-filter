@@ -2,11 +2,12 @@ dist: xenial
 language: cpp
 compiler: clang
 addons:
-  sources:
-  - llvm-toolchain-xenial-7.0
-  packages:
-  - libc++-dev
-  - libc++abi-dev
+  apt:
+    sources:
+    - llvm-toolchain-xenial-7.0
+    packages:
+    - libc++-dev
+    - libc++abi-dev
 install:
 - pip install --user conan
 - conan user
