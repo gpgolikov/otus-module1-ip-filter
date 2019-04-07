@@ -12,7 +12,7 @@ target_link_libraries(${PROJECT_NAME} CONAN_PKG::Catch2)
 set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
-    COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
+    COMPILE_OPTIONS "-stdlib=libc++ -static -Wpedantic;-Wall;-Wextra"
     INCLUDE_DIRECTORIES ${CMAKE_SOURCE_DIR}/src
 )
 
