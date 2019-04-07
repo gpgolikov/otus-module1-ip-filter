@@ -8,6 +8,8 @@ include_directories(${CMAKE_BINARY_DIR})
 include(conanbuildinfo.cmake)
 conan_basic_setup(TARGETS)
 
+set(CMAKE_CXX_FLAGS "-stdlib=libc++ -static")
+
 add_subdirectory(src)
 add_subdirectory(test)
 
