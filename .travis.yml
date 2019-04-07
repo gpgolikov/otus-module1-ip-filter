@@ -6,7 +6,7 @@ install:
 - conan user
 script:
 - conan install -s compiler=clang -s compiler.libcxx=libc++ .
-- CXXFLAGS="-stdlib=libc++ -static" cmake .
+- CXXFLAGS="-stdlib=libc++" cmake .
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
