@@ -8,6 +8,7 @@ addons:
     packages:
     - libc++-dev
     - libc++abi-dev
+    update: true
 install:
 - pip install --user conan
 - conan user
