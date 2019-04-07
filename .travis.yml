@@ -5,8 +5,8 @@ install:
 - pip install --user conan
 - conan user
 script:
-- conan install .
-- cmake .
+- conan install -s compiler=clang -s compiler.libcxx=libc++ .
+- CXXFLAGS="-stdlib=libc++ -static" cmake .
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package

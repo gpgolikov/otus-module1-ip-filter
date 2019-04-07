@@ -1,13 +1,11 @@
 #pragma once
 
 #include <iostream>
-#include <experimental/string_view>
+#include <string_view>
 #include <tuple>
 
-using std::experimental::string_view;
-
 template<typename OutIt>
-OutIt split(string_view s, char d, OutIt out) {
+OutIt split(std::string_view s, char d, OutIt out) {
     using namespace std;
 
     do {
@@ -28,7 +26,7 @@ inline ip_address_t make_ip(int ip_part1, int ip_part2, int ip_part3, int ip_par
     return std::make_tuple(ip_part1, ip_part2, ip_part3, ip_part4);
 }
 
-ip_address_t ip_read(string_view ip); 
+ip_address_t ip_read(std::string_view ip); 
 
 template <size_t Idx>
 bool __ip_match(const ip_address_t& ip, int ip_part) {
